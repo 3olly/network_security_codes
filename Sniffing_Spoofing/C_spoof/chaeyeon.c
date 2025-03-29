@@ -37,7 +37,7 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
 
       if (payload_len > 0) {
         printf("Message: ");
-        for (int i = 0; i < payload_len && i < 16; i++) { // 최대 16바이트만 출력
+        for (int i = 0; i < payload_len && i < 16; i++) { 
           printf("%c", isprint(payload[i]) ? payload[i] : '.');
         }
         printf("\n");
